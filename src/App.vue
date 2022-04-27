@@ -4,10 +4,9 @@
 
 <script lang="ts">
 import { defineComponent } from "vue";
-import AppHeader from "./components/AppHeader/AppHeader.vue";
+import AppHeader from "@/components/AppHeader/AppHeader.vue";
 
 export default defineComponent({
-  name: "App",
   components: { AppHeader },
 });
 </script>

@@ -77,7 +77,7 @@ export default defineComponent({
 });
 </script>
 
-<style lang="scss" scoped>
+<style lang="scss">
 .header__nav {
   display: flex;
   justify-content: space-between;
@@ -117,11 +117,37 @@ export default defineComponent({
 
     &__title {
       font-size: 32px;
+      margin-bottom: 25px;
     }
     &__text {
       font-size: 16px;
       max-width: 453px;
+      margin-bottom: 100px;
     }
   }
+}
+.flickity-page-dots {
+  position: absolute;
+  width: 100%;
+  bottom: 10px;
+  padding: 0;
+  margin: 0;
+  list-style: none;
+  text-align: center;
+  line-height: 1;
+  .dot {
+    display: inline-block;
+    width: 16px;
+    height: 3px;
+    margin: 0 4px;
+    background: rgba(255, 255, 255, 0.3);
+    border-radius: 1px;
+    opacity: 0.25;
+    cursor: pointer;
+  }
+}
+.flickity-page-dots .dot.is-selected {
+  background: #ffffff;
+  width: 24px;
 }
 </style>
