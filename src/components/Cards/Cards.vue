@@ -12,12 +12,19 @@ import { useNews } from "@/hooks/useNews";
 
 export default defineComponent({
   components: { Card },
-  setup(props) {
+  setup() {
     const { news } = useNews();
-    console.log(news);
     return { news };
   },
 });
 </script>
 
-<style lang="scss" scoped></style>
+<style lang="scss" scoped>
+.cards {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  flex-wrap: wrap;
+  margin-top: 25px;
+}
+</style>

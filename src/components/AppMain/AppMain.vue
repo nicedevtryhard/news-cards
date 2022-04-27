@@ -38,7 +38,7 @@ export default defineComponent({
 
 <style lang="scss" scoped>
 main {
-  padding: 60px 257px 3000px;
+  padding: 60px 257px;
 
   .user-filters {
     background: #ffffff;
@@ -51,7 +51,7 @@ main {
       top: 65px;
       left: 0;
       right: 0;
-      padding: 0 490px;
+      padding: 16px 490px;
       z-index: 102;
     }
     &__item {
@@ -61,7 +61,7 @@ main {
       position: relative;
     }
     &__author input {
-      width: 330px;
+      width: 295px;
       padding: 10px;
       border: 1px solid #e8e8e8;
       box-sizing: border-box;
@@ -80,7 +80,7 @@ main {
       border-radius: 4px;
       display: flex;
       justify-content: center;
-      min-width: 330px;
+      min-width: 295px;
     }
     &__date input {
       border: none;
