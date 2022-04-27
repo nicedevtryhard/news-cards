@@ -1,6 +1,6 @@
 <template>
   <header>
-    <nav class="header__nav">
+    <nav class="header__nav sticky">
       <img src="../../assets/logo.png" alt="" />
       <div class="contacts">
         <div class="contacts__phone"><span>8 800 000 00 00</span></div>
@@ -59,9 +59,6 @@ export default defineComponent({
   components: {
     Flickity,
   },
-  setup() {
-    return {};
-  },
   data() {
     return {
       flickityOptions: {
@@ -74,6 +71,7 @@ export default defineComponent({
       },
     };
   },
+  setup() {},
 });
 </script>
 
@@ -82,6 +80,8 @@ export default defineComponent({
   display: flex;
   justify-content: space-between;
   align-items: center;
+  padding: 25px 320px;
+  background: #ffffff;
 
   .contacts {
     display: flex;
@@ -90,10 +90,14 @@ export default defineComponent({
     &__phone {
       margin-right: 45px;
     }
-    &__mail {
-      margin-right: 138px;
-    }
   }
+}
+.sticky {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 101;
 }
 .carousel-cell {
   width: 100%; /* full width */
@@ -113,7 +117,7 @@ export default defineComponent({
     color: #fff;
     display: flex;
     flex-direction: column;
-    justify-content: end;
+    justify-content: flex-end;
 
     &__title {
       font-size: 32px;

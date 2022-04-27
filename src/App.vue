@@ -1,13 +1,15 @@
 <template>
   <app-header></app-header>
+  <app-main></app-main>
 </template>
 
 <script lang="ts">
 import { defineComponent } from "vue";
 import AppHeader from "@/components/AppHeader/AppHeader.vue";
+import AppMain from "@/components/AppMain/AppMain.vue";
 
 export default defineComponent({
-  components: { AppHeader },
+  components: { AppHeader, AppMain },
 });
 </script>
 
