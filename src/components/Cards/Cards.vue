@@ -1,21 +1,22 @@
 <template>
   <div class="cards">
-    <card v-for="card in news" :card="card" :key="card.id"></card>
+    <card v-for="card in cards" :card="card" :key="card.id"></card>
   </div>
 </template>
 
 <script lang="ts">
 import { defineComponent } from "vue";
 import Card from "../Card/Card.vue";
-// @ts-ignore
-import { useNews } from "@/hooks/useNews";
 
 export default defineComponent({
   components: { Card },
-  setup() {
-    const { news } = useNews();
-    return { news };
+  props: {
+    cards: {
+      type: Array,
+      required: true,
+    },
   },
+  setup() {},
 });
 </script>
 

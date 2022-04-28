@@ -6,6 +6,7 @@
       <div class="card__user-data">
         <span class="card__author">{{ card.author || "Аноним" }}</span>
         <span class="card__date">24 февраля 2022</span>
+        {{ card.publishedAt }}
       </div>
     </div>
   </div>

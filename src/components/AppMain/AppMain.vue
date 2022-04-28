@@ -2,7 +2,11 @@
   <main>
     <div class="user-filters">
       <div class="user-filters__author">
-        <input type="text" placeholder="Выберите автора" />
+        <input
+          v-model="searchQuery"
+          type="text"
+          placeholder="Выберите автора"
+        />
         <img src="@/assets/userIcon.png" alt="" class="user-filters__icon" />
       </div>
       <div class="user-filters__date">
@@ -10,19 +14,25 @@
         <input type="text" placeholder="~   До" />
       </div>
     </div>
-    <cards></cards>
+    <cards :cards="searchedNews"></cards>
   </main>
 </template>
 
 <script lang="ts">
 import { defineComponent } from "vue";
 import Cards from "../Cards/Cards.vue";
+import useSearchedNews from "@/hooks/useSortedNews";
+import { useNews } from "@/hooks/useNews";
 
 export default defineComponent({
   components: {
     Cards,
   },
-  setup() {},
+  setup() {
+    const { news } = useNews();
+    const { searchQuery, searchedNews } = useSearchedNews(news);
+    return { news, searchQuery, searchedNews };
+  },
   mounted() {
     window.addEventListener("scroll", function () {
       let filters = this.document.getElementsByClassName("user-filters")[0];

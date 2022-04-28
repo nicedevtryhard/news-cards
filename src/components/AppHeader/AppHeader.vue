@@ -11,9 +11,9 @@
       <div class="carousel-cell">
         <div class="carousel-cell__ratio"></div>
         <div class="carousel-cell-content">
-          <h2 class="carousel-cell-content__title">
+          <h1 class="carousel-cell-content__title">
             IT-инфраструктура для бизнеса
-          </h2>
+          </h1>
           <h4 class="carousel-cell-content__text">
             Мы предлагаем комплексные решения для всех уровней бизнеса: от
             индивидуальных предпринимателей до крупных международных компаний.
