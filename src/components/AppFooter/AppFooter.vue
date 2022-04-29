@@ -50,7 +50,7 @@ footer {
     display: none;
   }
   .footer__nav {
-    max-width: 675px;
+    flex-basis: 675px;
     padding-right: 130px;
     display: flex;
     flex-direction: column;
@@ -98,6 +98,7 @@ footer {
     }
 
     .footer__nav {
+      flex-basis: auto;
       justify-content: space-between;
     }
 
