@@ -22,10 +22,18 @@ export default defineComponent({
 
 <style lang="scss" scoped>
 .cards {
+  max-width: 925px;
+  margin: 25px auto 0;
   display: flex;
   justify-content: space-between;
   align-items: flex-start;
   flex-wrap: wrap;
   margin-top: 25px;
+}
+
+@media screen and(max-width: 768px) {
+  .cards {
+    justify-content: space-around;
+  }
 }
 </style>

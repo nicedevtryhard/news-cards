@@ -1,7 +1,7 @@
 import axios from "axios";
 import { ref, onMounted } from "vue";
 
-export function useNews(): any {
+export default function useNews() {
   let news = ref([]);
   const fetching = async () => {
     try {

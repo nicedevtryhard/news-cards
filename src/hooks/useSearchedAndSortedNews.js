@@ -1,9 +1,9 @@
 import { ref, computed } from "vue";
 
-export default function useSearchedNews(news: any): any {
+export default function useSearchedAndSortedNews(news) {
   const searchQuery = ref("");
-  const searchedNews = computed(() => {
-    return news.value.filter((el: any) => {
+  const searchedAndSortedNews = computed(() => {
+    return news.value.filter((el) => {
       if (el.author !== null) {
         return el.author
           .toLowerCase()
@@ -14,6 +14,6 @@ export default function useSearchedNews(news: any): any {
 
   return {
     searchQuery,
-    searchedNews,
+    searchedAndSortedNews,
   };
 }
