@@ -12,11 +12,19 @@
       <div class="user-filters__date">
         <span class="user-filters__toggle">
           <span class="user-filters__toggle-button">От</span>
-          <input type="date" class="user-filters__toggle-min" />
+          <input
+            type="date"
+            class="user-filters__toggle-min"
+            v-model="minValue"
+          />
         </span>
         <span class="user-filters__toggle">
           <span class="user-filters__toggle-button">~ До</span>
-          <input type="date" class="user-filters__toggle-max" />
+          <input
+            type="date"
+            class="user-filters__toggle-max"
+            v-model="maxValue"
+          />
         </span>
       </div>
     </div>
@@ -40,14 +48,16 @@ export default defineComponent({
   },
   setup() {
     const { news } = useNews();
+    const { minValue, maxValue, setSortedNews } = useSortedNews(news);
     const { searchQuery, searchedAndSortedNews } =
-      useSearchedAndSortedNews(news);
-    const { setDateQuery } = useSortedNews(news);
+      useSearchedAndSortedNews(setSortedNews);
     return {
       news,
+      minValue,
+      maxValue,
+      setSortedNews,
       searchQuery,
       searchedAndSortedNews,
-      setDateQuery,
     };
   },
   mounted() {

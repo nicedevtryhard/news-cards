@@ -5,14 +5,14 @@
       <p class="card__decription">{{ card.description }}</p>
       <div class="card__user-data">
         <span class="card__author">{{ card.author || "Аноним" }}</span>
-        <span class="card__date">24 февраля 2022</span>
+        <span class="card__date">{{ date }}</span>
       </div>
     </div>
   </div>
 </template>
 
 <script lang="ts">
-import { defineComponent, ref } from "vue";
+import { defineComponent } from "vue";
 
 export default defineComponent({
   props: {
@@ -21,9 +21,27 @@ export default defineComponent({
       required: true,
     },
   },
-  setup() {
-    const date = ref("");
-    return {};
+  setup(props) {
+    const d = new Date(props.card.publishedAt);
+    const months = [
+      "января",
+      "февраля",
+      "марта",
+      "апреля",
+      "мая",
+      "июня",
+      "июля",
+      "августа",
+      "сентября",
+      "октября",
+      "ноября",
+      "декабря",
+    ];
+    const day = d.getDate();
+    const monthName = months[d.getMonth()];
+    const year = d.getFullYear();
+    const date = `${day} ${monthName} ${year}`;
+    return { date };
   },
 });
 </script>
