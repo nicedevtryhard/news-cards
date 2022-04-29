@@ -36,6 +36,7 @@ export default defineComponent({
   border: 1px solid #e8e8e8;
   box-sizing: border-box;
   font-size: 14px;
+  margin-bottom: 20px;
   &__decription {
     height: 119px;
     overflow: hidden;
@@ -74,6 +75,11 @@ export default defineComponent({
   &__date {
     border: 1px solid #e8e8e8;
     margin-left: 10px;
+  }
+}
+@media screen and(max-width: 425px) {
+  .card {
+    margin-bottom: 10px;
   }
 }
 </style>

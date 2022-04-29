@@ -170,26 +170,6 @@ header {
     width: 24px;
   }
 }
-
-// @media screen and(min-width: 1441px) {
-//   header .header__nav {
-//     padding: 20px 10%;
-//   }
-//   .header__nav.sticky {
-//     padding: 20px 10%;
-//   }
-// }
-// @media screen and(max-width: 1440px) {
-//   .header__nav.sticky {
-//     padding: 20px 10%;
-//   }
-// }
-
-// @media screen and(max-width: 1024px) {
-//   header .header__nav.sticky {
-//     padding: 20px 140px;
-//   }
-// }
 @media screen and(max-width: 768px) {
   header .carousel-cell-content {
     display: flex;
@@ -199,18 +179,21 @@ header {
   }
 }
 
-// @media screen and(max-width: 425px) {
-//   header .header__nav {
-//     padding: 20px 15px;
-//   }
-//   .header__nav.sticky {
-//     padding: 20px 15px;
-//   }
-//   header .header__nav .contacts__text {
-//     display: none;
-//   }
-//   header .header__nav .contacts__img {
-//     display: block;
-//   }
-// }
+@media screen and(max-width: 425px) {
+  header .header__nav {
+    padding: 20px 15px;
+  }
+  .header__nav.sticky {
+    padding: 20px 15px;
+  }
+  header .header__nav .contacts__text {
+    display: none;
+  }
+  header .header__nav .contacts__img {
+    display: block;
+  }
+  header .carousel-cell-content {
+    padding: 0 15px;
+  }
+}
 </style>

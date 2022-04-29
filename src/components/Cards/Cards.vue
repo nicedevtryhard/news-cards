@@ -1,7 +1,7 @@
 <template>
-  <div class="cards">
+  <section class="cards">
     <card v-for="card in cards" :card="card" :key="card.id"></card>
-  </div>
+  </section>
 </template>
 
 <script lang="ts">

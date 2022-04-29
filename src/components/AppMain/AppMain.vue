@@ -177,10 +177,11 @@ main {
 }
 @media screen and(min-width: 1441px) {
   main .user-filters {
-    padding: 16px 0 0 17.9%;
+    padding: 16px 0 0 257px;
   }
   main .user-filters__sticky {
-    padding: 20px 17.9%;
+    padding-bottom: 15px;
+    margin: 0 0 0 22%;
   }
 }
 @media screen and(max-width: 1440px) {
@@ -231,7 +232,7 @@ main {
     padding: 0;
   }
   main .user-filters__sticky {
-    padding: 0;
+    padding: 0 0 10px 0;
   }
   .user-filters__author,
   .user-filters__date {
